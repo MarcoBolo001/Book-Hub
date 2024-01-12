@@ -116,7 +116,7 @@ public class UserController {
             System.out.println("You are not following any users.");
         } else {
             for (User followingUser : followingUsers) {
-                showProfilewithNoPass(followingUser);
+                showProfilewithNoPass(getUserByProfileName(followingUser.getprofileName()));
             }
         }
 
@@ -127,7 +127,7 @@ public class UserController {
             System.out.println("You have no followers.");
         } else {
             for (User follower : followers) {
-                showProfilewithNoPass(follower);
+                showProfilewithNoPass(getUserByProfileName(follower.getprofileName()));
             }
         }
     }
